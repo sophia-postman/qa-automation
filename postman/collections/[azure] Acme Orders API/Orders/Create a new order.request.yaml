@@ -1,0 +1,23 @@
+$kind: http-request
+description: Creates a checkout order, validates line items, and reserves inventory.
+url: "{{baseUrl}}/"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "customerId": "cust_01HZX92A",
+      "currency": "USD",
+      "items": [
+        {
+          "sku": "SKU-WIDGET-01",
+          "quantity": 2,
+          "unitPriceCents": 2499
+        }
+      ]
+    }
+examples: ./.resources/Create a new order.resources/examples
+order: 2000

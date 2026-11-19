@@ -1,0 +1,10 @@
+$kind: http-request
+description: Get shipment tracking for an order
+url: "{{baseUrl}}/:orderId/shipment"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  orderId: string
+examples: ./.resources/Get shipment tracking for an order.resources/examples
+order: 1000

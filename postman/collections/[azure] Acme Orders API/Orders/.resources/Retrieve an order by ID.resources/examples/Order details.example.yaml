@@ -1,0 +1,36 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/:orderId"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: Ocp-Apim-Subscription-Key
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    orderId: ord_94812
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "ord_94812",
+        "customerId": "cust_01HZX92A",
+        "status": "pending",
+        "currency": "USD",
+        "totalCents": 4998,
+        "items": [
+          {
+            "sku": "SKU-WIDGET-01",
+            "quantity": 2,
+            "unitPriceCents": 2499
+          }
+        ],
+        "createdAt": "string"
+      }
+order: 1000

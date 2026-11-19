@@ -1,0 +1,19 @@
+$kind: collection
+description: >-
+  Manages customer checkout orders, lifecycle transitions, cancellations, and
+  fulfillment shipment tracking for Acme Commerce.
+
+
+  Contact Support:
+   Name: Commerce Platform Team
+   Email: commerce-apis@acme-commerce.example
+variables:
+  baseUrl: https://acme-gw-235a30.azure-api.net/orders
+auth:
+  - id: 7858de79-5755-43b4-82d7-f987cdfb4bd9
+    type: apikey
+    name: apikey auth
+    credentials:
+      key: Ocp-Apim-Subscription-Key
+      value: "{{apiKey}}"
+      in: header

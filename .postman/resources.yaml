@@ -1,0 +1,5 @@
+workspace:
+  id: 38031a31-0eb5-416a-b976-961954b35871
+cloudResources:
+  collections:
+    ../postman/collections/[azure] Acme Orders API: 60318063-2f6c3970-42af-467d-9a14-fdcfd72759a7
