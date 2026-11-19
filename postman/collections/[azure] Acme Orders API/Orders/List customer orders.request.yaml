@@ -1,0 +1,12 @@
+$kind: http-request
+description: Returns a paginated list of orders filtered by status or customer ID.
+url: "{{baseUrl}}/?customerId=cust_01HZX92A&status=shipped&limit=20"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  customerId: cust_01HZX92A
+  status: shipped
+  limit: "20"
+examples: ./.resources/List customer orders.resources/examples
+order: 1000

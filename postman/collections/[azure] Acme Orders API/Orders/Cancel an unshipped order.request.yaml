@@ -1,0 +1,17 @@
+$kind: http-request
+description: Cancel an unshipped order
+url: "{{baseUrl}}/:orderId/cancel"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  orderId: string
+body:
+  type: json
+  content: |-
+    {
+      "reason": "customer_requested"
+    }
+examples: ./.resources/Cancel an unshipped order.resources/examples
+order: 4000

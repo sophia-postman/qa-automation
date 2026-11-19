@@ -1,0 +1,33 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/:orderId/cancel"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/json
+    - key: Ocp-Apim-Subscription-Key
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    orderId: string
+  body:
+    type: json
+    content: |-
+      {
+        "reason": "customer_requested"
+      }
+response:
+  statusCode: 409
+  statusText: Conflict
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "string",
+        "message": "string"
+      }
+order: 2000
